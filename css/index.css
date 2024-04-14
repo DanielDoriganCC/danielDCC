@@ -1,0 +1,154 @@
+#content{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.secao{
+    height: 100vh;
+    width: 100%;
+
+    background-color: black;
+    border-bottom: 1px white solid;
+}
+
+.waveDOWN {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.waveDOWN svg {
+    position: relative;
+    display: block;
+    width: calc(200% + 1.3px);
+    height: 45px;
+}
+
+.waveDOWN .shape-fill {
+    fill: #000000;
+}
+
+#introducao {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    transition: all 0.1s linear;
+    /* ANOTAÇÃO! Usar transform rotate pq ele é irado!  */
+
+    border: 0;
+}
+
+#logoMovivel {
+    height: 80%;
+    position: absolute;
+    top: 50vh;
+    right: 0vw;
+    z-index: 1;
+
+    translate: 0% -40%;
+}
+
+/* atenção, a distância da imagem para o topo da tela depende do tamanho da própria imagem, por isso se subtrai a metade de sua altura no translate */
+
+
+#introducao #nome, #hello, #introdutorio {
+    animation-name: showFirst;
+    animation-duration: 1.5s;
+    animation-delay: 0.1s;
+    z-index: 2;
+}
+
+
+@keyframes showFirst{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+#boxNome{
+    display: flex;
+    height: 42vh;
+    align-items: flex-end;
+}
+
+#introducao #nome{
+    color: aliceblue;
+    font-size: 7vmin;
+    text-align: center;
+
+    font-weight: 500;
+}
+
+#hello {
+    /* Add styles for the text */
+    font-size: 6vmin;
+    font-family: monospace;
+    color:rgb(11, 181, 11);
+
+    white-space: pre-wrap;
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#hello::after {
+    content: ' ';
+    position: relative;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 4px;
+    height: 100%;
+    background-color: rgb(11, 181, 11);
+
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-delay: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+#introdutorio {
+    color: aliceblue;
+    width: 28%;
+    /* text-wrap: balance; */
+    text-align: justify;
+
+    font-size: 3vmin;
+}
+
+/*  */
+#divisor1para2 .shape-fill  {
+    fill: #0057ad;
+}
+
+#bio{
+    background-color: #0057ad;
+}
