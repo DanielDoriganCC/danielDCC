@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-
+ 
     <header id="header">
         <div id="logoContainer">
             <a href="./index.html">
@@ -60,26 +60,37 @@
         </div>
 
         
-        <div class="secao" id="bio"> <!-- Logo passar para baixo até aqui, transformar ela em imagem e rotacionar-->
+        <div class="secao" id="bio"> 
             
-            <h1>Quem eu sou?</h1>
-            <h2>Eu sou um programador brasileiro</h2>
-            <h2>Que gosta de alternando</h2> <!--damian krugel-->
-            <h2>E programa em alternando</h2>
+            <div id="bioTextoBox">
+                
+                <h1 id="bioTitulo"></h1> <!--Quem eu sou?-->
 
-            <p>
-                Meu nome é Daniel, eu sou um programador full-stack brasileiro. Minha missão quanto programador é unir
-                códigos compreensíveis, lógicos e eficientes com uma interface de usuário amigável e moderna. <br>
-                Tenho experiência profissional advinda da minha formação técnica no Colégio Técnico de Campinas (COTUCA) 
-                e também uma paixão por resolver problemas reais com ferramentas virtuais.  
+                <div id="respostasBio">
+                    <h2>Eu sou um programador brasileiro</h2>
+                    <h2>Que gosta de alternando</h2> <!--Inspirado por damian drygel-->
 
-            </p>
+                
+                    <h2>E programa em alternando</h2>
+                </div>
 
+                <div id="boxLetras"></div>
+
+
+                <p id="bioTexto">
+                    Meu nome é Daniel, eu sou um programador full-stack brasileiro. Minha missão quanto programador é unir
+                    códigos compreensíveis, lógicos e eficientes com uma interface de usuário amigável e moderna. <br>
+                    Tenho experiência profissional advinda da minha formação técnica no Colégio Técnico de Campinas (COTUCA) 
+                    e também uma paixão por resolver problemas reais com ferramentas virtuais.  
+
+                </p>
+
+            </div>
 
         </div>
 
         <div class="secao" id="linguagens"> <!-- futuramente, adicionar página com informações mais específicas-->
-            
+            <!-- grid, quando o mouse passa por cima aumenta o card -->
         </div>
 
         <div class="secao" id="tools"> <!--frameworks etc-->
@@ -87,6 +98,7 @@
         </div>
 
         <div class="secao" id="projetos">
+            <!-- cards -->
             
         </div>
 
@@ -109,7 +121,10 @@
         
         <div class="secao" id="missaoProfissional">
             
-        </div> -->
+        </div> 
+    
+        <div> ansiosa para quem chegou ao final da página rápido demais
+    -->
         
 
     </div>
@@ -122,5 +137,9 @@
     <script src="../js/contrairHeader.js"></script>
     <script src="../js/displayHello.js"></script>
     <script src="../js/moverLogo.js"></script>
+
+    <script src="../js/textoPulante.js"></script>
+    <script src="../js/geradorDeLetrasSpan.js"></script>
+    <script src="../js/geradorDePalavrasSpan.js"></script>
 </body>
 </html>

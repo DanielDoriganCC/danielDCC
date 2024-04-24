@@ -28,9 +28,9 @@ var deg = 0
 window.addEventListener("scroll", () => {
     const scroll = window.scrollY || document.documentElement.scrollTop;
 
-    posicao = posicao + (scroll - ultScroll) * 0.15   // calcula a posicao
+    posicao = posicao + (scroll - ultScroll) * 0.14   // calcula a posicao
     
-    if (posicao < 100 + PosicaoInicial ){
+    if (posicao < 90 + PosicaoInicial ){
         imgMovivel.style.top = `${ posicao }vh`
         imgMovivel.style.transform = `rotate( ${ (deg + posicao - PosicaoInicial ) * 4 }deg)` // subtrair posição inicial (50)
     }
