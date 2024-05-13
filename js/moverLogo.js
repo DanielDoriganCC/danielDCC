@@ -35,6 +35,7 @@ window.addEventListener("scroll", () => {
         imgMovivel.style.transform = `rotate( ${ (deg + posicao - PosicaoInicial ) * 4 }deg)` // subtrair posição inicial (50)
     }
 
+
     ultScroll = scroll;
 });
 

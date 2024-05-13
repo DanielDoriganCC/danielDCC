@@ -1,3 +1,5 @@
+<!-- melhorar programacao do cursor, tornar mais reutilizável -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,7 +16,13 @@
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
- 
+
+    <!-- ideia advinda de https://codepen.io/clementGir/-->
+
+    <div id="cursor" class="cursores orbitante"></div>
+    <div id="smallerCursor" class="cursores"></div>
+
+
     <header id="header">
         <div id="logoContainer">
             <a href="./index.html">
@@ -42,7 +50,7 @@
 
     <div id="content">
         
-        <div class="secao" id="introducao">
+        <div class="secao" id="introducao"> <!-- adicionar call to action aqui, contato etc-->
             <div id="boxNome">
                 <h1 id="nome">Daniel Dorigan de Carvalho Campos</h1>
             </div>
@@ -68,36 +76,46 @@
 
                 <div id="respostasBio">
                     <h2>Eu sou um programador brasileiro</h2>
-                    <h2>Que gosta de alternando</h2> <!--Inspirado por damian drygel-->
 
+                    <!-- Quando hover, abre menu para ver todos os rotacioandos -->
+
+                    <h2 id="tituloGosta">Que gosta de 
+                        <div id="gostosBox">
+                        <p class="gostoMudavel"> matemática</p><p class="gostoMudavel"> programação</p><p class="gostoMudavel"> jogos digitais</p><p class="gostoMudavel"> Carl Sagan</p>   <!--Inspirado por damian drygel-->
+                        </div>
+                    </h2>
                 
-                    <h2>E programa em alternando</h2>
+                    <h2 id="tituloProgramaEm" >E programa em 
+                        <div id="programaEmBox">
+                            <p class="programaMudavel"> Java</p><p class="programaMudavel"> JavaScript</p><p class="programaMudavel"> Python</p><p class="programaMudavel"> C#</p><p class="programaMudavel"> SQL</p><p class="programaMudavel"> CSS</p><p class="programaMudavel"> HTML</p>
+                        </div>
+                    </h2>
                 </div>
-
-                <div id="boxLetras"></div>
 
 
                 <p id="bioTexto">
                     Meu nome é Daniel, eu sou um programador full-stack brasileiro. Minha missão quanto programador é unir
-                    códigos compreensíveis, lógicos e eficientes com uma interface de usuário amigável e moderna. <br>
+                    códigos compreensíveis, lógicos e eficientes a uma interface de usuário amigável e moderna. <br>
                     Tenho experiência profissional advinda da minha formação técnica no Colégio Técnico de Campinas (COTUCA) 
-                    e também uma paixão por resolver problemas reais com ferramentas virtuais.  
+                    e também uma paixão por resolver <span id="textoChique"> problemas reais com ferramentas virtuais.</span>
 
                 </p>
 
             </div>
 
+            <div id="divisor2para3">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
+            </div>
+
         </div>
 
-        <div class="secao" id="linguagens"> <!-- futuramente, adicionar página com informações mais específicas-->
-            <!-- grid, quando o mouse passa por cima aumenta o card -->
+        <div class="secao" id="linguagensEFerramentas"> <!-- futuramente, adicionar página com informações mais específicas-->
+            <!-- grid, quando o mouse passa por cima aumenta o card, quando clica deixa com detalhes bonitinho -> react blob -->
         </div>
 
-        <div class="secao" id="tools"> <!--frameworks etc-->
-            
-        </div>
-
-        <div class="secao" id="projetos">
+        <div class="secao" id="projetos"> <!-- colocar github aqui -->
             <!-- cards -->
             
         </div>
@@ -107,6 +125,8 @@
         <!-- <div class="secao" id="eventosECursos">
             
         </div>
+
+        github
 
         
         <div class="secao" id="medalhas">
@@ -122,6 +142,8 @@
         <div class="secao" id="missaoProfissional">
             
         </div> 
+
+        assinar seu nome que passou aqui
     
         <div> ansiosa para quem chegou ao final da página rápido demais
     -->
@@ -141,5 +163,10 @@
     <script src="../js/textoPulante.js"></script>
     <script src="../js/geradorDeLetrasSpan.js"></script>
     <script src="../js/geradorDePalavrasSpan.js"></script>
+
+    <script src="../js/palavrasAlternantes.js"></script>
+
+    <script src="../js/cursor.js"></script>
+    <script src="../js/cursorOrbitante.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
+body{
+    overflow-x: hidden;
+}
+
 #content{
     display: flex;
     flex-direction: column;
-}
-
-body{
-    overflow-x: hidden;
 }
 
 .secao{
@@ -12,7 +12,6 @@ body{
     width: 100%;
 
     background-color: black;
-    border-bottom: 1px white solid;
 }
 
 .waveDOWN {
@@ -150,17 +149,23 @@ body{
 }
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+/* lembrete: há como optimizar esse código, so rodar palvras quando observado (calcular posição mesmo fora?) */
+/* melhorar classes e ids dos textos alternantes */
+
 #divisor1para2 .shape-fill  {
     fill: #181818;
 }
 
 #bio{
     background-color: #181818;
+    height: 95vh;
+    position: relative;
 }
 
 #bioTextoBox{
     margin: 0vh 0 0 5vw;
-    position: absolute;
+    position: relative;
     z-index: 2;
 
     color: aliceblue;
@@ -204,10 +209,13 @@ body{
 }
 
 #bioTexto{
-    font-size: 2.5vmin;
-    width: 62%;
+    font-size: 2.8vmin;
+    width: 55%;
     text-align: justify;
-    height: 1vh;
+}
+
+#textoChique{
+    font-weight: 600;
 }
 
 .letras-da-palavra{
@@ -216,6 +224,7 @@ body{
 
 .letraPulando{
     animation: pularLetra 0.6s 0.3s ease-in-out;
+    animation-delay: 0.5s;
     white-space: pre-wrap;
 }
 
@@ -230,3 +239,116 @@ body{
         margin-bottom: 0vh;
     }
 }
+
+#tituloGosta, #tituloProgramaEm{
+    display: flex;
+}
+
+/* palavrasAlternantes */
+
+#gostosBox, #programaEmBox{
+    display: flex;
+    white-space: pre-wrap;
+}
+
+/* se quiser coloca overflow hidden */
+.gostoMudavel, .programaMudavel{
+    position: absolute;
+    transform: rotateX(0deg);
+    translate: 0 0;
+
+    opacity: 0;
+
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+.ateMetade{
+    animation-name: animaRotacionarMeio, animaMoverMeio;
+    opacity: 1;
+}
+
+.ateSair{
+    animation-name: animaRotacionarSair, animaMoverSair;
+    opacity: 1;
+}
+
+
+/* entrar */
+
+@keyframes animaRotacionarMeio {
+    0% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+@keyframes animaMoverMeio {
+    0% {
+        translate: 0 -2vh;
+    }
+
+    100% {
+        translate: 0 0vh;
+    }
+}
+
+/* sair */
+
+@keyframes animaRotacionarSair {
+    0% {
+        transform: rotateX(360deg);
+    }
+
+    100% {
+        transform: rotateX(270deg);
+    }
+}
+
+
+@keyframes animaMoverSair {
+    0%{
+        translate: 0 0vh;
+    }
+
+    100% {
+        translate: 0 2vh;
+    }
+}
+
+/* ver classe wavedown evitar repetição corrigir */
+
+#divisor2para3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+#divisor2para3 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 58px;
+}
+
+#divisor2para3 .shape-fill {
+    fill: #232D35;
+}
+
+/* */
+
+#linguagensEFerramentas{
+    background-color: #232d35;
+}
+
+
+
+/* Linguagem e ferramentas */
