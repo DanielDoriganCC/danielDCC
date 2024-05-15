@@ -361,7 +361,78 @@ body{
 
 #projetos{
     background-color: black;
-    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* alterar depois */
+    height: 120vh;
+}
+
+#cabecalhoProjetos{
+    color: white;
+    width: 55%;
+
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+#tituloProjetos{
+    font-size: 10vmin;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+#descricaoProjetos{
+    text-align: center;
+}
+
+
+#informativoProjetos{
+    margin-bottom: 2%;
+}
+
+#boxCoresProjeto{
+    display: flex;
+    justify-content: space-around;
+}
+
+.associacaoCorTamProj{
+    display: flex;
+}
+
+.corTamanhoProj{
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    margin-right: 18%;
+}
+
+.projcorLaranja{
+    background-color: orange;
+}
+
+.projcorAmarelo{
+    background-color: yellow;
+}
+
+.projcorVerde{
+    background-color: green;
+}
+
+
+
+/*  */
+
+#boxCardsProj{
+    background-color: aquamarine;
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    gap: 10%;
 }
 
 .cardProjeto{
@@ -373,6 +444,8 @@ body{
 
     position: relative;
     overflow: hidden;
+
+    transition: all ease 0.7s, border 0s;
 }
 
 .corIdentificadoraProj{
@@ -384,6 +457,8 @@ body{
 
     top: 34px;
     left: -86px;
+
+    transition: 0.7s ease;
 }
 
 .tituloCardProj {
@@ -392,12 +467,17 @@ body{
 
     z-index: 0;
     position: relative;
+
+    transition: 0.7s ease;
+
 }
 
 .tituloCardProj p {
     font-size: 2.7rem;
     color: black;
     margin-left: 5%;
+
+    transition: 0.7s ease;
 }
 
 .boxIconesProj{
@@ -407,6 +487,8 @@ body{
     padding-left: 20%;
     display: flex;
     gap: 4%;
+
+    transition: 0.7s ease;
 }
 
 .iconeProj{
@@ -414,6 +496,9 @@ body{
     aspect-ratio: 1/1;
 
     background-size: cover;
+
+    position: relative;
+    z-index: 1;
 }
 
 .iconeJava{
@@ -426,15 +511,125 @@ body{
 
 .textoProj{
     width: 76%;
-    height: 45%; 
+    height: fit-content;
+    max-height: 45%; 
+
     margin-left: 21%;
     color: black;
 
     font-weight: 600;
+    
+    transition: 0.7s ease;
+
+    word-wrap: break-word;
+
+    position: relative;
+    z-index: 1;
 }
 
 /* hover */
 
-.cardProjetoHover{
+.cardProjeto:hover{
+    scale: 1.2;
+    z-index: 20;
+    border: 2px solid white;
+}
+
+/* click */
+
+.cardProjetoSelecionado{
+    aspect-ratio: 2 / 2.4;
+    /* position: fixed;
+    top: 30vh;
+    left: 36vw; */
+
+    scale: 1 !important;
+}
+
+.cardProjetoSelecionado .corIdentificadoraProj{
+    rotate: 0deg;
+    width: 23%;
+    height: 100%;
+    top: 0;
+    left: -10%;
+}
+
+.cardProjetoSelecionado .tituloCardProj{
+    height: 19%;
+    font-size: 3.1rem;
+}
+
+.cardProjetoSelecionado .boxIconesProj{
+    height: 10%;
+}
+
+.cardProjetoSelecionado .textoProj{
+    margin-bottom: 5%;
+    height: fit-content;
+    max-height: 35%;
+}
+/* 
+.cardProjetoSelecionado .textoProj p{
+    overflow-y: scroll;
+} */
+
+.projRefs{
+    display: block;
+    /* display: none; */
+    opacity: 0;
+
+    transition: 0.4s opacity ease;
+
+    width: 87%;
+    margin-left: 13%;
+
+    height: 32%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     
+}
+
+.cardProjetoSelecionado .projRefs{
+    /* display: block; */
+    opacity: 1;
+}
+
+.botaoProj{
+    width: 70%;
+    height: 44%;
+
+    border-radius: 0.9rem;
+    background-color: #232d35;
+
+    overflow: hidden;
+
+    display: flex;
+
+    text-decoration: none !important;
+}
+
+.imagemProj{
+    width: 27%;
+    height: 100%;
+    background-size: cover;
+}
+
+.githubProj{
+    background-image: url(../src/github.jpg);
+}
+
+.siteProj{
+    background-image: url(../src/site.png);
+
+}
+
+.btnTextoProj{
+    color: azure;
+    align-content: center;
+
+    margin-left: 6%;
+    font-size: 1.3rem;
 }
