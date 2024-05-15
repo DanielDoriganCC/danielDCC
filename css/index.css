@@ -12,6 +12,7 @@ body{
     width: 100%;
 
     background-color: black;
+    position: relative;
 }
 
 .waveDOWN {
@@ -43,6 +44,32 @@ body{
     /* ANOTAÇÃO! Usar transform rotate pq ele é irado!  */
 
     border: 0;
+}
+
+#listaContatoIntroducao{
+    position: absolute;
+    bottom: 39%;
+    left: 0;
+
+    height: 145px;
+
+    padding: 0.5%;
+    padding-left: 0.2%;
+
+    background-color: #cabeca47;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+
+    border-radius: 0% 1rem 1rem 0%;
+}
+
+
+#listaContatoIntroducao a, #listaContatoIntroducao img{
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
 }
 
 #logoMovivel {
@@ -353,6 +380,26 @@ body{
     background-color: #232d35;
 }
 
+.custom-shape-divider-bottom-1715785997 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1715785997 svg {
+    position: relative;
+    display: block;
+    width: calc(140% + 1.3px);
+    height: 49px;
+}
+
+.custom-shape-divider-bottom-1715785997 .shape-fill {
+    fill: #000F1A;
+}
+
 /* */
 
 /* Projetos */
@@ -534,7 +581,7 @@ body{
 
 .cardProjeto:hover{
     scale: 1.2;
-    z-index: 20;
+    z-index: 4 !important;
     border: 2px solid white;
 }
 
@@ -648,3 +695,5 @@ body{
     margin-left: 6%;
     font-size: 1.3rem;
 }
+
+/*  */
