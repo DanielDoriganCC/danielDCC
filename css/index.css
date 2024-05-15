@@ -360,7 +360,7 @@ body{
 /*  */
 
 #projetos{
-    background-color: black;
+    background-color: #000f1a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -425,27 +425,30 @@ body{
 /*  */
 
 #boxCardsProj{
-    background-color: aquamarine;
     width: 80%;
 
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
 
-    gap: 10%;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
+    gap: 2.5vh 2%;
 }
 
 .cardProjeto{
-    width: 300px;
+    width: 24vw;
     aspect-ratio: 2/1;
     background-color: #57565f;
 
     border-radius: 1rem;
 
-    position: relative;
+    position: absolute;
     overflow: hidden;
 
-    transition: all ease 0.7s, border 0s;
+    transition: all ease 0.7s, border 0s, z-index cubic-bezier(0, 0.67, 0.25, 1) 0.7s;
+
+    z-index: 1;
 }
 
 .corIdentificadoraProj{
@@ -537,13 +540,25 @@ body{
 
 /* click */
 
+
+.blocoProj{
+    position: relative;
+    width: 24vw;
+    aspect-ratio: 2/1;
+    height: fit-content;
+}
+
 .cardProjetoSelecionado{
     aspect-ratio: 2 / 2.4;
-    /* position: fixed;
-    top: 30vh;
-    left: 36vw; */
+
+    position: absolute;
+    
+    translate: 0% -10%; 
+    top: 0;
+    right: 0;
 
     scale: 1 !important;
+    z-index: 3 !important;
 }
 
 .cardProjetoSelecionado .corIdentificadoraProj{

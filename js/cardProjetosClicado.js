@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // mouseout
         element.addEventListener('mouseleave', () => {
             element.classList.remove("cardProjetoSelecionado")
+            element.style.zIndex = 3;
+            setTimeout(() => { element.style.zIndex = 1 }, 150)
         })
     });
 })
