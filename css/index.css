@@ -50,16 +50,19 @@ body{
     position: absolute;
     bottom: 39%;
     left: 0;
+    z-index: 2;
 
-    height: 145px;
+    height: 19vh;
 
     padding: 0.5%;
-    padding-left: 0.2%;
+    padding-left: 0.45%;
+    padding-right: 0.45%;
 
     background-color: #cabeca47;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 3%;
 
     border-radius: 0% 1rem 1rem 0%;
@@ -67,8 +70,8 @@ body{
 
 
 #listaContatoIntroducao a, #listaContatoIntroducao img{
-    height: 45px;
-    width: 45px;
+    height: 6vh;
+    aspect-ratio: 1/1;
     border-radius: 10px;
 }
 
@@ -378,7 +381,91 @@ body{
 
 #linguagensEFerramentas{
     background-color: #232d35;
+
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+
 }
+
+#tituloLinguagensEFerramentas{
+    margin-top: 9vh;
+    margin-bottom: 5vh;
+
+}
+
+#tituloLinguagensEFerramentas h1{
+}
+
+
+#boxLinguagensEFerramentas{
+    width: 80%;
+
+    position: relative;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+
+
+    grid-template-columns: repeat(7, 14%);
+    /* grid-template-rows: repeat(3, 1fr); */
+    gap: 2.5vh 0%;
+}
+
+.blocoLingOuFerramenta{
+    
+    width: 9vw;
+    aspect-ratio: 1/1;
+    background-color: #57565f;
+
+    border-radius: 1rem;
+
+    overflow: hidden;
+
+    transition: all ease 0.7s, border 0s, z-index cubic-bezier(0, 0.67, 0.25, 1) 0.7s;
+
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.boxIMGLinguagemOuFerramenta{
+    width: 60%;
+    margin-top: 10%;
+    aspect-ratio: 1/1;
+}
+
+.boxIMGLinguagemOuFerramenta img{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.tituloLinguagemOuFerramenta{
+
+}
+
+.ferramenta{
+
+}
+
+.linguagem{
+
+}
+
+/* .naoLinguagem .linguagem{
+    display: none;
+}
+
+.naoFerramenta .ferramenta{
+    display: none;
+} */
+
+
+
 
 .custom-shape-divider-bottom-1715785997 {
     position: absolute;
@@ -456,7 +543,7 @@ body{
 }
 
 .projcorLaranja{
-    background-color: orange;
+    background-color: rgb(237 77 0);
 }
 
 .projcorAmarelo{
@@ -499,14 +586,14 @@ body{
 }
 
 .corIdentificadoraProj{
-    height: 100px;
-    width: 170px;
+    height: 15vh;
+    width: 18vw;
     position: absolute;
     rotate: 79deg;
     background: rgb(237 77 0);
 
-    top: 34px;
-    left: -86px;
+    top: 4vh;
+    left: -9.5vw;
 
     transition: 0.7s ease;
 }
@@ -636,16 +723,16 @@ body{
 } */
 
 .projRefs{
-    display: block;
-    /* display: none; */
     opacity: 0;
 
-    transition: 0.4s opacity ease;
+    /* melhorar isso depois do height */
+    transition: 0.4s opacity ease, 0.4s height ease;
+
+    height: 0;
 
     width: 87%;
     margin-left: 13%;
 
-    height: 32%;
 
     display: flex;
     flex-direction: column;
@@ -655,8 +742,9 @@ body{
 }
 
 .cardProjetoSelecionado .projRefs{
-    /* display: block; */
     opacity: 1;
+
+    height: 32%;
 }
 
 .botaoProj{
