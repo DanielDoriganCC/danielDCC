@@ -395,7 +395,12 @@ body{
 
 }
 
+#tituloLinguagensEFerramentas p{
+    font-size: 3vmin;
+}
+
 #tituloLinguagensEFerramentas h1{
+    font-size: 5vmin;
 }
 
 
@@ -408,18 +413,20 @@ body{
     justify-content: center;
 
 
-    grid-template-columns: repeat(7, 14%);
-    /* grid-template-rows: repeat(3, 1fr); */
-    gap: 2.5vh 0%;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 11vw) );
+    /* minmax correspondente aos blocos */
+    
+    gap: 2.5vh 2vw;
 }
 
 .blocoLingOuFerramenta{
     
-    width: 9vw;
-    aspect-ratio: 1/1;
+    width: 11vw;
+    min-width: 120px;
+    aspect-ratio: 8/5;
     background-color: #57565f;
 
-    border-radius: 1rem;
+    border-radius: 1.5vw;
 
     overflow: hidden;
 
@@ -428,15 +435,26 @@ body{
     z-index: 1;
 
     display: flex;
-    flex-direction: column;
     
     align-items: center;
 }
 
+/* efeito de seguir o mouse, corrigir depois isso aqui */ 
+
+.efeitoFundo{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    /* background-color: wheat; */
+}
+
 .boxIMGLinguagemOuFerramenta{
-    width: 60%;
-    margin-top: 10%;
+    width: 40%;
+    margin-left: 7%;
+    margin-right: 5%;
     aspect-ratio: 1/1;
+
+    display: flex;
 }
 
 .boxIMGLinguagemOuFerramenta img{
@@ -445,7 +463,8 @@ body{
 }
 
 .tituloLinguagemOuFerramenta{
-
+    font-size: 2vmin;
+    font-weight: bold;
 }
 
 .ferramenta{
@@ -668,7 +687,7 @@ body{
 
 .cardProjeto:hover{
     scale: 1.2;
-    z-index: 4 !important;
+    z-index: 10 !important;
     border: 2px solid white;
 }
 
@@ -785,3 +804,7 @@ body{
 }
 
 /*  */
+
+footer{
+    height: 5vh;
+}
