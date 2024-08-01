@@ -5,6 +5,8 @@ body{
 #content{
     display: flex;
     flex-direction: column;
+
+    width: 100vw;
 }
 
 .secao{
@@ -393,6 +395,13 @@ body{
     margin-top: 9vh;
     margin-bottom: 5vh;
 
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+
+    width: 58vw;
+    justify-content: space-between
 }
 
 #tituloLinguagensEFerramentas p{
@@ -400,89 +409,122 @@ body{
 }
 
 #tituloLinguagensEFerramentas h1{
-    font-size: 5vmin;
+    font-size: 7.5vmin;
+}
+
+.corTituloLF{
+    width: 1.3vw;
+    aspect-ratio: 1/1;
 }
 
 
-#boxLinguagensEFerramentas{
-    width: 80%;
 
+
+
+#cardsLingFerrBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;  
+    max-width: 916px;
+    width: calc(100% - 20px);
+
+    justify-content: space-between;
+
+    margin-top: 8vh;
+}
+
+#cardsLingFerrBox:hover > .cardLingFerr::after {
+    opacity: 1;
+}
+
+.cardLingFerr {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    display: grid;
-    justify-items: center;
-    justify-content: center;
-
-
-    grid-template-columns: repeat(auto-fill, minmax(120px, 11vw) );
-    /* minmax correspondente aos blocos */
     
-    gap: 2.5vh 2vw;
+    width: 220px;
+    aspect-ratio: 11 / 5;
 }
 
-.blocoLingOuFerramenta{
-    
-    width: 11vw;
-    min-width: 120px;
-    aspect-ratio: 8/5;
-    background-color: #57565f;
 
-    border-radius: 1.5vw;
-
-    overflow: hidden;
-
-    transition: all ease 0.7s, border 0s, z-index cubic-bezier(0, 0.67, 0.25, 1) 0.7s;
-
-    z-index: 1;
-
-    display: flex;
-    
-    align-items: center;
+.cardLingFerr:hover::before {
+    opacity: 1;
 }
 
-/* efeito de seguir o mouse, corrigir depois isso aqui */ 
-
-.efeitoFundo{
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    /* background-color: wheat; */
-}
-
-.boxIMGLinguagemOuFerramenta{
-    width: 40%;
-    margin-left: 7%;
-    margin-right: 5%;
-    aspect-ratio: 1/1;
-
-    display: flex;
-}
-
-.boxIMGLinguagemOuFerramenta img{
+.cardLingFerr::before,
+.cardLingFerr::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
     width: 100%;
-    aspect-ratio: 1/1;
 }
 
-.tituloLinguagemOuFerramenta{
-    font-size: 2vmin;
-    font-weight: bold;
+.cardLingFerr::before {
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    z-index: 3;
 }
 
-.ferramenta{
+.cardLingFerr::after {  
+    background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(255, 255, 255, 0.4),
+        transparent 40%
+    );
+    z-index: 1;
+}
+
+.cardLingFerr > .cardLingFerr-content {
+    background-color: rgb(23, 23, 23);
+    border-radius: inherit;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    inset: 1px;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+
+    align-items: center;
+
+}
+  
+.lingFerrBoxImg{
+    height: 60%;
+}
+
+.lingFerrTitulo{
+    color: #ffffff;
+    font-size: 2rem;
+    padding-left: 7%;
+}
+
+.ferramentaLF{
+    background-color: #171d30 !important;
 
 }
 
-.linguagem{
-
+.linguagemLF{
+    background-color:  #121e1a !important;
 }
 
-/* .naoLinguagem .linguagem{
+.naoLinguagem .linguagemBoxLF{
     display: none;
 }
 
-.naoFerramenta .ferramenta{
+.naoFerramenta .ferramentaBoxLF{
     display: none;
-} */
-
+}
 
 
 
@@ -505,6 +547,7 @@ body{
 .custom-shape-divider-bottom-1715785997 .shape-fill {
     fill: #000F1A;
 }
+
 
 /* */
 
@@ -806,5 +849,88 @@ body{
 /*  */
 
 footer{
-    height: 5vh;
+    height: 20vh;
+    position: relative;
+}
+
+#separadorFooter{
+    height: 0;
+    width: 0;
+    position: relative;
+/* 
+    overflow: hidden; */
+}
+
+.skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#ske1{    
+    top: -1vh;
+    width: 100vw;
+    height: 14vh;
+    transform: skewY(4deg);
+    background: #002947;
+    transform-origin: top right;
+}
+
+#ske2{
+    width: 100vw;
+    height: 10vh;
+    transform: skewY(357deg);
+    background: #001627;
+    transform-origin: top left;
+}
+
+#ske3{
+    top: -7vh;
+    width: 100vw;
+    height: 10vh;
+    transform: skewY(357deg);
+    background: #000f1a;
+    transform-origin: top left;
+}
+
+#contentFooter{
+    /* height: 20vh; */
+    width: 100vw;
+    background-color: #001627;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#assinatura {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3.5vmin;
+    font-weight: bold;
+    letter-spacing: 0.6vw;
+}
+
+#informativoFooter{
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-size: 1.9vmin;
+} #informativoFooter a{
+    color: white;
+}
+
+#conclusao{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3.5vmin;
+    font-weight: bold;
+
 }

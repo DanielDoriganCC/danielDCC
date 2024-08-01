@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/generico.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/cursorLF.css">
 </head>
 <body>
 
@@ -32,16 +33,22 @@
         
         <ul id="navLinks"> <!-- Texto aumenta, aparece fundo escuro e listra em baixo -->
             <li>
-                <a href="./salaDeBatePapo.html">Bate Papo</a>
+                <a href="#bio">Pessoal</a>
             </li>
             <li>
-                <a href="./calculadora.html">Calculadora</a>
+                <a href="#linguagensEFerramentas">Linguagens</a>
             </li>
             <li>
-                <a href="./exercicios.html">Exercícios</a>
+                <a href="#projetos">Projetos</a>
             </li>
             <li>
-                <a href="./aprender.html">Aprender</a>
+                <a href="#formacaoAcademica">Acadêmico</a>
+            </li>
+            <li>
+                <a href="#evetosOlimpiadas">Eventos</a>
+            </li>
+            <li>
+                <a href="#contatoEcontrato">Contate-me</a>
             </li>
         </ul>
 
@@ -117,48 +124,110 @@
 
         </div>
 
-        <div class="secao" id="linguagensEFerramentas"> <!-- futuramente, adicionar página com informações mais específicas-->
-            <!-- grid, quando o mouse passa por cima aumenta o card, quando clica deixa com detalhes bonitinho -> react blob -->
+
+        <div class="secao" id="linguagensEFerramentas"> 
+            
+            <!-- futuramente, adicionar página com informações mais específicas-->
+            <!-- grid, quando o mouse passa por cima aumenta o card, quando clica deixa com detalhes bonitinho ->
+            react blob -->
 
             <div id="tituloLinguagensEFerramentas">
+                <div class="corTituloLF" style="background-color: #121e1a;"></div>
                 <h1>Linguagens e Ferramentas</h1>
-                <p>colocar aqui radio button ambos / linguagens / ferramentas</p>
+                <div class="corTituloLF" style="background-color: #171d30;"></div>
+                            
             </div>
             
-            <!-- como deixar isso bonito? -->
+            <div id="boxCursorLingFerr">
+                <div id="espacoExtraLF"></div>
+                <div id="cursorLingFerr">
+                    <div id="decoracaoCursorLF"></div>
+                </div>
+            </div>
+            <!-- customizar formato? -->
 
-            <!-- select pra só linguagems select pra so ferramentas -> radio button bem bonito! -->
-            <!-- grid naoFerramentas > não mostra as classes ferramentas -->
-            <!-- negocio de brilho seguir mouse mesmo fora do card -->
+            <!-- 
+            ferramentas: #171d30
+            linguagens: #121e1a
+            original: rgb(23, 23, 23)
+            -->
 
+            <!-- créditos da próxima parte à hyperplexed -->
 
-            <div id="boxLinguagensEFerramentas">
-                <div class="blocoLingOuFerramenta ferramenta">
-                    <div class="boxIMGLinguagemOuFerramenta">
-                        <img src="../src/JS.png">
+            <div id="cardsLingFerrBox" class="">
+
+                <div class="cardLingFerr ferramentaBoxLF">
+                    <div class="cardLingFerr-content ferramentaLF">
+                        <img src="../src/java.png" class="lingFerrBoxImg"> <!-- corrigir fonte-->
+                        <div class="lingFerrTitulo">
+                            Ferramenta
+                        </div>
                     </div>
-                    <p class="tituloLinguagemOuFerramenta">Python</p>
-                    <div class="efeitoFundo"></div>
                 </div>
                 
-                <div class="blocoLingOuFerramenta ferramenta">
-                    <div class="boxIMGLinguagemOuFerramenta">
-                        <img src="../src/JS.png">
+                <div class="cardLingFerr linguagemBoxLF">
+                    <div class="cardLingFerr-content linguagemLF">
+                        <img src="../src/java.png" class="lingFerrBoxImg"> <!-- corrigir fonte-->
+                        <div class="lingFerrTitulo">
+                            Linguagem
+                        </div>
                     </div>
-                    <p class="tituloLinguagemOuFerramenta">Python</p>
-                    <div class="efeitoFundo"></div>
                 </div>
 
+                <div class="cardLingFerr ferramentaBoxLF">
+                    <div class="cardLingFerr-content ferramentaLF">
+                        <img src="../src/java.png" class="lingFerrBoxImg"> <!-- corrigir fonte-->
+                        <div class="lingFerrTitulo">
+                            Java
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cardLingFerr linguagemBoxLF">
+                    <div class="cardLingFerr-content linguagemLF">
+                        <img src="../src/java.png" class="lingFerrBoxImg"> <!-- corrigir fonte-->
+                        <div class="lingFerrTitulo">
+                            Java
+                        </div>
+                    </div>
+                </div>
 
-                <!-- <div class="blocoLingOuFerramenta ferramenta"></div>
-                <div class="blocoLingOuFerramenta ferramenta"></div>
-                <div class="blocoLingOuFerramenta ferramenta"></div>
+                <div class="cardLingFerr ferramentaBoxLF">
+                    <div class="cardLingFerr-content ferramentaLF">
+                        <img src="../src/java.png" class="lingFerrBoxImg"> <!-- corrigir fonte-->
+                        <div class="lingFerrTitulo">
+                            Java
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cardLingFerr linguagemBoxLF">
+                    <div class="cardLingFerr-content linguagemLF">
+                        <img src="../src/java.png" class="lingFerrBoxImg"> <!-- corrigir fonte-->
+                        <div class="lingFerrTitulo">
+                            Java
+                        </div>
+                    </div>
+                </div>
 
-                <div class="blocoLingOuFerramenta linguagem"></div>
-                <div class="blocoLingOuFerramenta linguagem"></div>
-                <div class="blocoLingOuFerramenta linguagem"></div>
-                <div class="blocoLingOuFerramenta linguagem"></div>
-                <div class="blocoLingOuFerramenta linguagem"></div> -->
+                <div class="cardLingFerr linguagemBoxLF">
+                    <div class="cardLingFerr-content linguagemLF">
+                        <img src="../src/java.png" class="lingFerrBoxImg"> <!-- corrigir fonte-->
+                        <div class="lingFerrTitulo">
+                            Java
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cardLingFerr ferramentaBoxLF">
+                    <div class="cardLingFerr-content ferramentaLF">
+                        <img src="../src/java.png" class="lingFerrBoxImg"> <!-- corrigir fonte-->
+                        <div class="lingFerrTitulo">
+                            Java
+                        </div>
+                    </div>
+                </div>
+                
             </div>
 
             <div class="custom-shape-divider-bottom-1715785997">
@@ -168,10 +237,15 @@
             </div>
         </div>
 
+
+<!--  -->
+
+
         <div class="secao" id="projetos"> <!-- colocar github aqui -->
 
             <div id="cabecalhoProjetos">
-                <h1 id="tituloProjetos">Projetos </h1>
+                <h1 id="tituloProjetos">Projetos corrigir mova o mouse p/ ver o erro </h1>
+                <!-- provavelmente tem a ver com animação, por isso que some no caso -->
 
                 <div id="descricaoProjetos">
                     <p id="informativoProjetos">Clique nos cartões para mais detalhes</p>
@@ -226,7 +300,7 @@
                         <div class="corIdentificadoraProj"></div>
 
                         <div class="tituloCardProj">
-                            <p>CodeDrafts</p>
+                            <p>CodeDrafts1</p>
                         </div>
 
                         <div class="boxIconesProj">
@@ -254,7 +328,7 @@
                         <div class="corIdentificadoraProj"></div>
 
                         <div class="tituloCardProj">
-                            <p>CodeDrafts</p>
+                            <p>CodeDrafts2</p>
                         </div>
 
                         <div class="boxIconesProj">
@@ -282,7 +356,7 @@
                         <div class="corIdentificadoraProj"></div>
 
                         <div class="tituloCardProj">
-                            <p>CodeDrafts</p>
+                            <p>CodeDrafts3</p>
                         </div>
 
                         <div class="boxIconesProj">
@@ -310,7 +384,7 @@
                         <div class="corIdentificadoraProj"></div>
 
                         <div class="tituloCardProj">
-                            <p>CodeDrafts</p>
+                            <p>CodeDrafts4</p>
                         </div>
 
                         <div class="boxIconesProj">
@@ -339,7 +413,7 @@
                         <div class="corIdentificadoraProj"></div>
 
                         <div class="tituloCardProj">
-                            <p>CodeDrafts</p>
+                            <p>CodeDrafts5</p>
                         </div>
 
                         <div class="boxIconesProj">
@@ -394,7 +468,25 @@
     </div>
 
     <footer>
-        footer
+        <div id="separadorFooter">
+            <section>
+                <div class="skewed" id="ske3"></div>
+                <div class="skewed" id="ske1"></div>
+                <div class="skewed" id="ske2"></div>
+            </section>
+        </div>
+        <div id="contentFooter">
+            <div id="assinatura">≜Δ</div>
+            <div id="informativoFooter">
+                Esse projeto foi feito por um aluno do COTUCA da turma de PD23 durante o ano de 2024. <br>
+                Os direitos autorais desse site são protegidos, entretanto o seu código pode ser usado se citações forem fornecidas.<br>
+                Confira o código em <a href="https://github.com/DanielDoriganCC/danielDCC" target="_blank" >https://github.com/DanielDoriganCC/danielDCC</a><br>
+                Muito obrigado pela sua visita, espero que tenha gostado do site!<br>
+                danieldorigancampos@gmail.com
+            </div>
+
+            <div id="conclusao">■</div>
+        </div>
     </footer>
     
 
@@ -415,5 +507,6 @@
 
     <script src="../js/cardProjetosClicado.js"></script>
 
+    <script src="../js/cursorLF.js"></script>
 </body>
 </html>

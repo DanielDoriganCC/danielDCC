@@ -1,0 +1,59 @@
+#boxCursorLingFerr{
+    height: 20px;
+    width: 400px;
+
+    background-color: beige;
+    border-radius: 1rem;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    z-index: 0;
+}
+
+#cursorLingFerr{
+    --altura: 40px;
+
+    height: var(--altura);
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background-color: rgb(23, 23, 23);
+
+    position: absolute;
+
+    left: calc(50% - var(--altura)/2); 
+    
+    transition: background-color 0.2s linear;
+
+    
+    display: flex;
+    align-items: center;
+}
+
+#decoracaoCursorLF{
+    -webkit-user-drag: none;
+    user-select: none;
+
+    --altura: 120%;
+
+    height: var(--altura);
+    aspect-ratio: 1/1;
+
+    border-radius: 100%;
+    background-color: #696969;
+    z-index: -1;
+
+    position: absolute;
+    left: calc(50% - var(--altura)/2);
+    
+    transition: background-color 0.2s linear;
+} 
+
+#espacoExtraLF{
+    width: 120%;
+    height: 250%;
+
+    -webkit-user-drag: none;
+    user-select: none;
+}
