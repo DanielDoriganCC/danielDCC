@@ -17,7 +17,7 @@ body{
 }
 
 ::-webkit-scrollbar {
-    width: 0.5vw;
+    width: 0.9vw;
     background: antiquewhite;
 }
 ::-webkit-scrollbar-thumb {

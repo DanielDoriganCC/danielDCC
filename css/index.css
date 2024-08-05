@@ -409,7 +409,7 @@ body{
 }
 
 #tituloLinguagensEFerramentas h1{
-    font-size: 7.5vmin;
+    font-size: 7vmin;
 }
 
 .corTituloLF{
@@ -846,7 +846,258 @@ body{
     font-size: 1.3rem;
 }
 
-/*  */
+.custom-shape-divider-bottom-1722643387 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1722643387 svg {
+    position: relative;
+    display: block;
+    width: calc(112% + 1.3px);
+    height: 45px;
+}
+
+.custom-shape-divider-bottom-1722643387 .shape-fill {
+    fill: #071A27;
+}
+
+
+/* formação acadêmica */
+
+#formacaoAcademica{
+    background-color: #071a27;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 220vh;
+}
+
+#formacaoAcademica h1{
+    margin-top: 14vh;
+    font-size: 8vmin;
+
+    color: #ffffff;
+}
+
+#colegiosBox{
+    gap: 20px;
+    display: flex;
+    margin-top: 7vh;
+}
+
+.colegio{
+    height: 280px;
+    width: 300px;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #000000;
+    color: #FFF;
+    border: #b0b0b0 1px solid;
+}
+
+.fotoColegio{
+    height: 40%;
+    width: 100%;
+    background-size: cover;
+}
+
+#imgCotuca{
+    background-image: url(../src/cotuca.jpg);
+}
+
+#imgImaculada{
+    background-image: url(../src/imaculada.png);
+}
+
+#imgPIC{
+    background-image: url(../src/CicloBasico2.jpg);
+    background-position-y: 66%;
+}
+
+.nomeColegio{
+    font-size: xx-large;
+    margin-left: 4%;
+}
+
+.descricaoColegio{
+    margin-left: 4%;
+}
+
+#boxParticipacaoOlimpica{
+    margin-top: 5vh;
+    display: flex;
+    gap: 5%;
+    color: #FFF;
+}
+
+.cardMedalha{
+    height: 280px;
+    width: 250px;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #000000;
+    color: #FFF;
+    border: #b0b0b0 1px solid;
+}
+
+.iconeMedalhaBox{
+    height: 20%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vmin;
+    color: black;
+    font-weight: bold;
+}
+
+/* ou icone mesmo? */
+#iconeMedalhaOuro{
+    background-color: #bb9e00;
+}
+
+#iconeMedalhaPrata{
+    background-color: #dadada;
+}
+
+#iconeMedalhaBronze{
+    background-color: #86501b;
+}
+
+.numMedalha{
+    width: 100%;
+    font-size: 6.5vmin;
+    text-align: center;
+}
+
+.listaMedalhas{
+    width: 100%;
+    height: 57%;
+/* corrigir height */
+
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+/* resolver problema com a scrollbar */
+    scrollbar-width: none;
+    scrollbar-color: #888 transparent; /* thumb color, track color */
+
+    /* ?? */
+    align-items: center;
+}
+
+.listaMedalhas ::-webkit-scrollbar{
+    background: none !important;
+}
+
+.listaMedalhas ::-webkit-scrollbar-track{
+    box-shadow: none !important;
+}
+
+.itemListaMedalhas{
+    /* padding-left: 5%; */
+}
+
+.borderListaMedalhas{
+    height: 1px;
+    width: 50%; 
+    /* 70 */
+    background-color: #b0b0b0;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+#boxCursos{
+    margin-top: 5vh;
+}
+
+
+/* eventos */
+/* 
+#eventos{
+
+} */
+
+
+/* contato */
+
+#contato{
+    background-color: #050b0f;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 70vh;
+}
+
+
+#contato h1{
+    margin-top: 14vh;
+    font-size: 8vmin;
+
+    color: #ffffff;
+}
+
+#contatosBOX{
+    width: 80%;
+    margin-top: 5vh;
+
+    display: flex;
+    gap: 9% 2%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contatoCard{
+    height: 58px;
+    color: #FFF;
+
+    background-color: #000000;
+    border: 1px solid white;
+    border-radius: 2rem;
+
+    display: flex;
+    overflow: hidden;
+
+    align-items: center;
+}
+
+.contatoCard:hover{
+    border: #002947 1px solid;
+}
+
+.iconeContato{
+    height: 75%;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.nomeContato{
+    flex-shrink: 0;
+    width: 9vw;
+}
+
+/* footer */
 
 footer{
     height: 20vh;
