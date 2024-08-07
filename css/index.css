@@ -389,6 +389,8 @@ body{
     flex-direction: column;
     align-items: center;
 
+    height: 150vh;
+    /* corrigir height depois */
 }
 
 #tituloLinguagensEFerramentas{
@@ -413,7 +415,7 @@ body{
 }
 
 .corTituloLF{
-    width: 1.3vw;
+    width: 2.3vw;
     aspect-ratio: 1/1;
 }
 
@@ -425,10 +427,13 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 8px;  
-    max-width: 916px;
-    width: calc(100% - 20px);
+    /* max-width: 916px; */
+    /* width: calc(100% - 20px); */
+    width: 80vw;
+    /* min-width: 300px; */
 
-    justify-content: space-between;
+    /* justify-content: space-between;
+    isso alinhava com o meio do título mas precisa ser substituído */
 
     margin-top: 8vh;
 }
@@ -444,7 +449,11 @@ body{
     flex-direction: column;
     position: relative;
     
-    width: 220px;
+    /* width: 220px; */
+    width: calc(25% - 6px);
+    /* min-width: 180px; */
+    /* ajustar isso depois */
+
     aspect-ratio: 11 / 5;
 }
 
@@ -501,6 +510,8 @@ body{
   
 .lingFerrBoxImg{
     height: 60%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .lingFerrTitulo{
@@ -909,8 +920,6 @@ body{
     height: 40%;
     width: 100%;
     background-size: cover;
-
-    backface-visibility: hidden !important;
 }
 
 #imgCotuca{
@@ -1187,3 +1196,15 @@ footer{
     font-weight: bold;
 
 }
+
+
+
+@media screen and (max-width: 300px){
+}
+
+
+/* width / min-width / max-width: The width of the viewport.
+height / min-height / max-height: The height of the viewport.
+orientation: The orientation of the device (landscape or portrait).
+aspect-ratio / min-aspect-ratio / max-aspect-ratio: The aspect ratio of the device.
+resolution / min-resolution / max-resolution: The resolution of the device. */
