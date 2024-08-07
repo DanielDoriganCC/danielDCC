@@ -1,0 +1,658 @@
+/* CSS Document */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;    
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 190px 1fr 50px;
+    grid-template-areas:
+        "aside1 header aside2"
+        "aside1 content aside2"
+        "aside1 footer aside2";
+    height: 100vh;
+    margin: 0;   
+}
+
+header.header{
+    grid-area: header;
+    display: block;
+    background-color: #FFF;
+    margin: 0;
+}
+
+header.header .logo{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+header.header .logo #comvest{
+    height: 86px;
+    width: 341px;
+}
+
+header.header .logo #unicamp{
+    height: 86px;
+    width: 80px;
+}
+
+header.header .logo #ufscar{
+    height: 86px;
+    width: 80px;
+}
+
+header.header .logo #vestibular{   
+    height: 190px;
+    width: 160px;
+}
+
+header.header .logo #vestibularcomprovante{   
+    height: 155px;
+    width: 317px;
+}
+
+header.header .logo > span{
+    width: 50px;
+}
+
+header.header .page-title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgb(255,66,0);
+    background: linear-gradient(0deg, rgba(255,66,0,1) 0%, rgba(255,117,0,1) 100%);   
+    padding: 0;
+    margin: 0;
+    height: 80px;        
+    border-radius: 5px;
+    box-shadow: -5px 0px 20px 1px rgba(0,0,0,0.4);      
+}
+
+header.header .page-title > h1{
+    margin-left: 10px;
+	font-family: Verdana;
+	font-size: 1.8rem;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+main.content{
+    grid-area: content;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+aside.aside1{
+    grid-area: aside1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #E5E5E5;
+    padding: 10px;
+}
+
+aside.aside2{
+    grid-area: aside2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #E5E5E5;
+    padding: 10px;    
+}
+
+footer.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+    border-top: solid 1px #000000;
+    background-color: #FFF;     
+}
+
+.bg-gray {
+    background-color: #DDDDDD;
+}
+
+.bg-lightgray {
+    background-color: #F0F0F0;
+}
+
+/* CSS ANTIGO */
+.titulo {
+	font-family: Verdana;
+	font-size: 16px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #bf1515;
+	text-decoration: none;
+}
+.tituloblack {
+	font-family: Verdana;
+	font-size: 16px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+}
+.titulowhite {
+	font-family: Verdana;
+	font-size: 16px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.texto {
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+}
+.textoblue {
+	font-family: Verdana;
+	font-size: 13px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #0a4891;
+	text-decoration: none;
+}
+.textored {
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #D90000;
+	text-decoration: none;
+}
+.textolink {
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #004cd5;
+	text-decoration: none;
+}
+.leiamais {
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: underline;
+	color: #004cd5;
+}
+.tabelatitulo {
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+}
+.tabelatexto {
+	font-family: Verdana;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	color: #000000;
+}
+.tabelatextolink {
+	font-family: Verdana;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	color: #004cd5;
+}
+.voceestaem {
+	font-family: Verdana;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+}
+.titulored {
+	font-family: Verdana;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #E32A33;
+	text-decoration: none;
+}
+.subtitulo {
+	font-family: Verdana;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+}
+.linkinterno2 {
+	font-family: Verdana;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #666666;
+	text-decoration: none;
+}
+.destaque {
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+}
+.destaquered {
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #FF0000;
+	text-decoration: none;
+}
+.destaquelink {
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #004cd5;
+	text-decoration: none;
+}
+.cursos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #990033;
+}
+.cursos_sub {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	color: #666666;
+}
+.cursos_sub2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #999999;
+}
+.cursos_legenda {
+	font-family: Arial;
+	font-size: 9px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	color: #000000;
+}
+.menu {
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #666666;
+	text-decoration: none;
+}
+.titulohome {
+	font-family: Verdana;
+	font-size: 16px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #990033;
+	text-decoration: none;
+}
+.tabelatitulobranco {
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #ffffff;
+	text-decoration: none;
+}
+.tabelatextoblue {
+	font-family: Verdana;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	color: #0a4891;
+}
+a.linkinterno{
+	font-family: Verdana;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #666666;
+	text-decoration: none;
+}
+a.linkinterno:link {
+	background: url(../images/link.gif) no-repeat;
+	padding-left: 16px;	
+}
+a.linkinterno:visited {
+	background: url(../images/link.gif) no-repeat;
+	padding-left: 16px;	
+}
+a.linkinterno:hover {
+	background: url(../images/mais_vest.gif) no-repeat;
+	padding-left: 16px;		
+}
+	
+a.linkinterno:active {
+	background-image: url(../images/link.gif) no-repeat;
+	padding-left: 16px;		
+}
+a:hover{
+    text-decoration:underline; 
+    color: #004cd5;
+}
+.separador {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5px;
+	font-style: normal;
+	color: #FFFFFF;
+}
+.linkbotao { 
+    font-family: verdana, arial, sans-serif; 
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+    padding: 3px; 	
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;	
+    background-color: #E8E8E8; 
+} 
+.linkbotao:link, .linkbotao:visited { 
+   border-top: 1px solid #CDC9C9;
+   border-bottom: 1px solid #CDC9C9; 
+   border-left: 1px solid #CDC9C9; 
+   border-right: 1px solid #CDC9C9; 
+} 
+.linkbotao:hover { 
+   border-bottom: 1px solid #1E90FF; 
+   border-top: 1px solid #1E90FF; 
+   border-right: 1px solid #1E90FF; 
+   border-left: 1px solid #1E90FF;
+   text-decoration:none; 
+   color: #000000;
+   background:#E8F7FF;
+}
+
+/* CONTEUDO.CSS */
+.fiqueatento {
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	color: #990033;
+}
+.noticias {
+
+	font-family: Verdana;
+	font-size: 13px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #666666;
+	text-decoration: none;
+}
+.menufiqueatento {
+	font-family: Verdana;
+	font-size: 13px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #666666;
+	text-decoration: none;
+}
+.textoDir {
+	text-align: right;
+}
+.checa {
+	font-family: "Courier New", Courier, mono;
+	font-size: 6px;
+	color: #000000;
+}
+.titulo_maior {
+	font-family: "Franklin Gothic Medium";
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #E32A33;
+	text-decoration: none;
+}
+.normal {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: normal;
+	font-weight: normal;
+	color: #000000;
+}
+.normallink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;	
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;	
+	text-transform: none;
+	color: #004cd5;
+	text-decoration: none;
+}
+.normal-vermelho {
+	font-family: Arial;
+	font-size: 14px;
+	color: #E32A33;
+	font-weight: bold;
+
+}
+.lista {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: 14pt;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000000;
+	text-align: left;
+}
+.dest-texto {
+	font-family: Arial;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+}
+.dest-leia {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #E32A33;
+	font-weight: bold;
+
+}
+.lateral {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	line-height: 12pt;
+	font-weight: bold;
+	font-variant: normal;
+	color: #000000;
+	text-align: left;
+}
+/* FIM CSS ANTIGO */
+
+.b-radius {
+    border-radius: 5px;
+}
+
+/* PC */
+@media (max-width: 1680px){
+    body{
+        grid-template-columns: 1fr;        
+        grid-template-areas:
+            "header"
+            "content"
+            "footer";        
+    }
+    aside.aside1{
+        display: none;
+    }    
+    aside.aside2{
+        display: none;
+    }      
+}
+
+
+/* TABLET */
+@media (max-width: 768px){
+    body{
+        grid-template-columns: 1fr;        
+        grid-template-areas:
+            "header"
+            "content"
+            "footer";        
+    }
+    aside.aside1{
+        display: none;
+    }    
+    aside.aside2{
+        display: none;
+    }      
+}
+
+
+/* MOBILE */
+@media (max-width: 480px){
+    body{
+        grid-template-columns: 1fr;        
+        grid-template-areas:
+            "header"
+            "content"
+            "footer";        
+    }
+    aside.aside1{
+        display: none;
+    }    
+    aside.aside2{
+        display: none;
+    }
+    header.header .logo #comvest{
+        height: 55px;
+        width: 230px;
+    }
+
+    header.header .logo #unicamp{
+        height: 55px;
+        width: 50px;
+    }   
+    header.header .logo #vestibular{   
+        height: 140px;
+        width: 110px;
+    }    
+    header.header .logo > span{
+        width: 30px;
+    }    
+}
