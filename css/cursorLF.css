@@ -1,6 +1,6 @@
 #boxCursorLingFerr{
     height: 20px;
-    width: 400px;
+    width: 31vw;
 
     background-color: beige;
     border-radius: 1rem;
@@ -13,7 +13,7 @@
 }
 
 #cursorLingFerr{
-    --altura: 40px;
+    --altura: 200%;
 
     height: var(--altura);
     aspect-ratio: 1/1;

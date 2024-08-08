@@ -389,7 +389,7 @@ body{
     flex-direction: column;
     align-items: center;
 
-    height: 150vh;
+    height: 250vh;
     /* corrigir height depois */
 }
 
@@ -429,7 +429,7 @@ body{
     gap: 8px;  
     /* max-width: 916px; */
     /* width: calc(100% - 20px); */
-    width: 80vw;
+    width: 70vw;
     /* min-width: 300px; */
 
     /* justify-content: space-between;
@@ -451,6 +451,7 @@ body{
     
     /* width: 220px; */
     width: calc(25% - 6px);
+    /* min-width: 170px; */
     /* min-width: 180px; */
     /* ajustar isso depois */
 
@@ -559,6 +560,103 @@ body{
     fill: #000F1A;
 }
 
+
+
+/* idealmente maior que 160px, entretanto até 115px é aceitável */
+
+html{
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+    #cardsLingFerrBox {
+        width: 75vw;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #cardsLingFerrBox {
+        width: 80vw;
+        /* min-width: 300px; */
+    }
+
+    .cardLingFerr {
+        width: calc(33% - 4px);
+    }
+
+}
+
+
+@media screen and (max-width: 630px) {
+    #cardsLingFerrBox {
+        width: 75vw;
+    }
+
+    .cardLingFerr {
+        width: calc(50% - 4px);
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    #cardsLingFerrBox {
+        width: 80vw;
+        /* min-width: 300px; */
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    /* a esse ponto fica inviável o modelo atual */
+    #cardsLingFerrBox {
+        width: 80vw;
+        /* min-width: 300px; */
+    }
+
+    .cardLingFerr {
+        width: calc(33% - 5px);
+        aspect-ratio: 1;
+    }
+
+     
+    .lingFerrBoxImg{
+        height: 85%;
+    }
+
+    .lingFerrTitulo{
+        display: none;
+    }
+
+    .cardLingFerr-content{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .cardLingFerr {
+        width: calc(50% - 4px);
+        aspect-ratio: 1;
+    }
+}
+ 
+@media screen and (max-width: 120px) {
+    .cardLingFerr {
+        width: calc(100%);
+    }
+}
+
+/* @media screen and (max-width: 1500px) {
+    #cardsLingFerrBox {
+        width: 80vw;
+        /* min-width: 300px; 
+    }
+
+    .cardLingFerr {
+        width: calc(25% - 6px);
+        min-width: calc(50% - 4px);
+    }
+
+} */
 
 /* */
 
