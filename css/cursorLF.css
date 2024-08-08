@@ -13,7 +13,9 @@
 }
 
 #cursorLingFerr{
-    --altura: 200%;
+    --altura: 40px;
+    /* --altura: 200%; */
+    /* 3.5vw */
 
     height: var(--altura);
     aspect-ratio: 1/1;
