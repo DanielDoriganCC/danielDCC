@@ -14,7 +14,6 @@ function adjustFontSize() {
             fontSize--;
             container.style.fontSize = fontSize + 'px';
         }
-        console.log(container, fontSize, container.clientWidth)
     });
 
 }
