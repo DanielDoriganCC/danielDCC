@@ -1061,8 +1061,11 @@ body{
 }
 
 .cardMedalha{
-    height: 280px;
-    width: 250px;
+    /* height: 280px; */
+    /* width: 250px; */
+    width: 16.3vw;
+    aspect-ratio: 25/31;
+
     border-radius: 1rem;
     overflow: hidden;
 
