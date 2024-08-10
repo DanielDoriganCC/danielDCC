@@ -1,5 +1,14 @@
+/* header logo movível e cores dos projetos estão deixando o site cortado */
+/* resolução provisória: */
+html{
+    overflow-x: hidden;
+}
+
 body{
     overflow-x: hidden;
+
+    /* provisório */
+    overflow-y: hidden;
 }
 
 #content{
@@ -981,13 +990,20 @@ body{
 
 /* formação acadêmica */
 
+:root{
+    --referencia-de-tamanho-fa: 1vw;
+}
+
 #formacaoAcademica{
     background-color: #071a27;
     display: flex;
     flex-direction: column;
     align-items: center;
+/* 
+    height: 220vh; */
 
-    height: 220vh;
+    height: auto;
+    padding-bottom: 12vh;
 }
 
 #formacaoAcademica h1{
@@ -1006,7 +1022,9 @@ body{
 .colegio{
     /* height: 280px; */
     /* width: 300px; */
-    width: 19.5vw;
+    /* width: 19.5vw; */
+
+    width: calc(var(--referencia-de-tamanho-fa) * 19.5);
     aspect-ratio: 15/14;
 
     border-radius: 1rem;
@@ -1041,7 +1059,9 @@ body{
 
 .nomeColegio{
     /* font-size: xx-large; */
-    font-size: 2.06vw;
+    /* font-size: 2.06vw; */
+    font-size: calc(var(--referencia-de-tamanho-fa) * 2.06);
+
     margin-left: 4%;
     width: 90%;
 }
@@ -1050,7 +1070,8 @@ body{
     margin-left: 4%;
     width: 90%;
 
-    font-size: 1.05vw;
+    /* font-size: 1.05vw; */
+    font-size: calc(var(--referencia-de-tamanho-fa) * 1.05);
 }
 
 #boxParticipacaoOlimpica{
@@ -1063,7 +1084,9 @@ body{
 .cardMedalha{
     /* height: 280px; */
     /* width: 250px; */
-    width: 16.3vw;
+    /* width: 16.3vw; */
+
+    width: calc(var(--referencia-de-tamanho-fa) * 16.3);
     aspect-ratio: 25/31;
 
     border-radius: 1rem;
@@ -1152,6 +1175,100 @@ body{
 #boxCursos{
     margin-top: 5vh;
 }
+
+
+
+@media screen and (max-width: 1300px) {
+    :root{
+        --referencia-de-tamanho-fa: 1.2vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    :root{
+        --referencia-de-tamanho-fa: 1.4vw;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    :root{
+        --referencia-de-tamanho-fa: 1.75vw;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    :root{
+        --referencia-de-tamanho-fa: 1.9vw;
+    }
+
+    #boxParticipacaoOlimpica{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    :root{
+        --referencia-de-tamanho-fa: 2.4vw;
+    }
+
+    #boxParticipacaoOlimpica, #colegiosBox{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    :root{
+        --referencia-de-tamanho-fa: 2.6vw;
+    }
+
+    #boxParticipacaoOlimpica, #colegiosBox{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    :root{
+        --referencia-de-tamanho-fa: 2.9vw;
+    }
+
+    #boxParticipacaoOlimpica, #colegiosBox{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    :root{
+        --referencia-de-tamanho-fa: 3.1vw;
+    }
+
+    #boxParticipacaoOlimpica, #colegiosBox{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 275px) {
+    :root{
+        --referencia-de-tamanho-fa: 4.4vw;
+    }
+
+    #boxParticipacaoOlimpica, #colegiosBox{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 180px) {
+    .descricaoColegio{
+        font-size: calc(var(--referencia-de-tamanho-fa) * 1.6);
+        overflow-y: auto;
+    }
+}
+
 
 
 /* eventos */
