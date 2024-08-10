@@ -1042,6 +1042,8 @@ body{
     height: 40%;
     width: 100%;
     background-size: cover;
+
+    flex-shrink: 0;
 }
 
 #imgCotuca{
@@ -1072,6 +1074,8 @@ body{
 
     /* font-size: 1.05vw; */
     font-size: calc(var(--referencia-de-tamanho-fa) * 1.05);
+
+    height: 40%;
 }
 
 #boxParticipacaoOlimpica{
@@ -1212,7 +1216,7 @@ body{
         --referencia-de-tamanho-fa: 2.4vw;
     }
 
-    #boxParticipacaoOlimpica, #colegiosBox{
+    #colegiosBox{
         flex-direction: column;
         gap: 20px;
     }
@@ -1220,52 +1224,39 @@ body{
 
 @media screen and (max-width: 400px) {
     :root{
-        --referencia-de-tamanho-fa: 2.6vw;
-    }
-
-    #boxParticipacaoOlimpica, #colegiosBox{
-        flex-direction: column;
-        gap: 20px;
+        --referencia-de-tamanho-fa: 3vw;
     }
 }
 
-@media screen and (max-width: 370px) {
-    :root{
-        --referencia-de-tamanho-fa: 2.9vw;
-    }
-
-    #boxParticipacaoOlimpica, #colegiosBox{
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-@media screen and (max-width: 300px) {
-    :root{
-        --referencia-de-tamanho-fa: 3.1vw;
-    }
-
-    #boxParticipacaoOlimpica, #colegiosBox{
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-@media screen and (max-width: 275px) {
+@media screen and (max-width: 315px) {
     :root{
         --referencia-de-tamanho-fa: 4.4vw;
     }
-
-    #boxParticipacaoOlimpica, #colegiosBox{
-        flex-direction: column;
-        gap: 20px;
-    }
 }
 
-@media screen and (max-width: 180px) {
+@media screen and (max-width: 220px) {
     .descricaoColegio{
         font-size: calc(var(--referencia-de-tamanho-fa) * 1.6);
         overflow-y: auto;
+    }
+
+    .nomeColegio{
+        font-size: calc(var(--referencia-de-tamanho-fa) * 3.14);
+    }
+}
+
+@media screen and (max-width: 125px) {
+    .descricaoColegio{
+        font-size: calc(var(--referencia-de-tamanho-fa) * 1.9);
+        overflow-y: auto;
+    }
+
+    .nomeColegio{
+        font-size: calc(var(--referencia-de-tamanho-fa) * 3.14);
+    }
+
+    .colegio{
+        aspect-ratio: 15/23;
     }
 }
 
