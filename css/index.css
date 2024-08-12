@@ -390,6 +390,8 @@ body{
 
 /*  */
 
+/* VER TAMANHO ADAPTÁVEL DA LUZ */
+
 #linguagensEFerramentas{
     background-color: #232d35;
 
@@ -1076,6 +1078,7 @@ body{
     font-size: calc(var(--referencia-de-tamanho-fa) * 1.05);
 
     height: 40%;
+    overflow-y: auto;
 }
 
 #boxParticipacaoOlimpica{
@@ -1104,6 +1107,8 @@ body{
     border: #b0b0b0 1px solid;
 }
 
+/* melhorar responsibilidade das medalhas! */
+
 .iconeMedalhaBox{
     height: 20%;
     width: 100%;
@@ -1111,9 +1116,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4vmin;
     color: black;
     font-weight: bold;
+
+    font-size: calc(var(--referencia-de-tamanho-fa) * 1.6);
+    /* font-size: 4vmin; */
 }
 
 /* ou icone mesmo? */
@@ -1131,8 +1138,10 @@ body{
 
 .numMedalha{
     width: 100%;
-    font-size: 6.5vmin;
     text-align: center;
+
+    font-size: calc(var(--referencia-de-tamanho-fa) * 3.25);
+    /* font-size: 6.5vmin; */
 }
 
 .listaMedalhas{
@@ -1165,6 +1174,8 @@ body{
 
 .itemListaMedalhas{
     /* padding-left: 5%; */
+    font-size: calc(var(--referencia-de-tamanho-fa) * 1.05);
+    /* falta responsibilidade de card de medalha */
 }
 
 .borderListaMedalhas{
@@ -1180,6 +1191,8 @@ body{
     margin-top: 5vh;
 }
 
+
+/* CONSERTAR: h1 margin top */
 
 
 @media screen and (max-width: 1300px) {
@@ -1237,23 +1250,27 @@ body{
 @media screen and (max-width: 220px) {
     .descricaoColegio{
         font-size: calc(var(--referencia-de-tamanho-fa) * 1.6);
-        overflow-y: auto;
     }
 
     .nomeColegio{
         font-size: calc(var(--referencia-de-tamanho-fa) * 3.14);
+    }
+
+    .itemListaMedalhas{
+        font-size: calc(var(--referencia-de-tamanho-fa) * 1.45);
+        /* ajustar esse cálculo */
+    }
+
+    .iconeMedalhaBox{
+        font-size: calc(var(--referencia-de-tamanho-fa) * 1.9);
     }
 }
 
 @media screen and (max-width: 125px) {
-    .descricaoColegio{
+    .descricaoColegio, .itemListaMedalhas{
         font-size: calc(var(--referencia-de-tamanho-fa) * 1.9);
-        overflow-y: auto;
     }
-
-    .nomeColegio{
-        font-size: calc(var(--referencia-de-tamanho-fa) * 3.14);
-    }
+    /* quebra de linha de medalhas corrigir */
 
     .colegio{
         aspect-ratio: 15/23;
@@ -1270,6 +1287,11 @@ body{
 
 
 /* contato */
+
+
+/* tamanho do card adaptável para caber dentro sempre */
+/* problema é o padding e a margin, que não estão sendo levados em conta pela div
+ver até qual largura de tela o texto estará vis */
 
 #contato{
     background-color: #050b0f;
@@ -1326,7 +1348,19 @@ body{
 .nomeContato{
     flex-shrink: 0;
     width: 9vw;
+
+    font-size: clamp(9px, 1.6vw, 2000px);
 }
+
+@media screen and (max-width: 900px) {
+}
+
+
+
+/* 
+@media{
+    texto some e fica só uma bolinha
+} */
 
 /* footer */
 
