@@ -1333,6 +1333,9 @@ ver até qual largura de tela o texto estará vis */
     overflow: hidden;
 
     align-items: center;
+
+    padding-left: 2.5%;
+    padding-right: 2.5% ;
 }
 
 .contatoCard:hover{
@@ -1341,13 +1344,13 @@ ver até qual largura de tela o texto estará vis */
 
 .iconeContato{
     height: 75%;
-    margin-left: 10%;
-    margin-right: 5%;
+    /* margin-left: 10%;
+    margin-right: 5%; */
 }
 
 .nomeContato{
     flex-shrink: 0;
-    width: 9vw;
+    /* width: 9vw; */
 
     font-size: clamp(9px, 1.6vw, 2000px);
 }

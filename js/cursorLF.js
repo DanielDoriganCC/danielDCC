@@ -1,13 +1,48 @@
 // possíveis melhorias:
 // somente se mover se estiver segurando o cursor
+// melhorar a qualidade do código em questão de funcionar tanto para celular quanto computador
+
+// aviso: esse código é apenas um rascunho
 
 let boxCursorLingFerr = document.getElementById("boxCursorLingFerr")
 let cursorLingFerr = document.getElementById("cursorLingFerr")
 
 var estado = "C"
-boxCursorLingFerr.onmousemove = e => {
 
-    if (isLeftMouseButtonPressed){
+// tocar já define também
+// parar de segurar finaliza evento
+
+boxCursorLingFerr.ontouchmove = e => {
+    let touch = e.touches[0];
+    let clientX = touch.clientX;
+    let clientY = touch.clientY;
+
+    // Now you can check if the coordinates are within your element
+    let element = document.getElementById("boxCursorLingFerr");
+    let rect = element.getBoundingClientRect();
+
+    if (clientX >= rect.left && clientX <= rect.right && clientY >= rect.top && clientY <= rect.bottom) {
+        tocou(clientX, true)
+    }
+}
+
+boxCursorLingFerr.ontouchend = e => {
+    tocou(0, false)
+    // console.log(clientX)
+}
+
+boxCursorLingFerr.onmousemove = e => {
+    // if (isLeftMouseButtonPressed){
+    // }
+    tocou(e.clientX, isLeftMouseButtonPressed)
+}
+
+
+// receberá parâmetros de X e Y por enquanto nas coxas uma bool
+function tocou(cordx, boolTemporaria) {
+
+    // tirar mousebutton pressed colocar no boxcursor.onmousemove
+    if (boolTemporaria){
         cursorLingFerr.style.transition = ""
 
         const cursorLFStyle = getComputedStyle(cursorLingFerr)
@@ -17,7 +52,7 @@ boxCursorLingFerr.onmousemove = e => {
         const LFmin = rect.left 
         const LFmax = rect.right
 
-        const posicao = e.clientX - LFmin 
+        const posicao = cordx - LFmin 
         var esquerda = 0
 
         if (posicao < 0)
@@ -32,7 +67,7 @@ boxCursorLingFerr.onmousemove = e => {
 
         cursorLingFerr.style.left = esquerda
 
-        const posicaoPorCento = (e.clientX - LFmin)/(LFmax - LFmin) * 100
+        const posicaoPorCento = (cordx - LFmin)/(LFmax - LFmin) * 100
    
 
         if (posicaoPorCento < 33.33)
@@ -102,7 +137,13 @@ boxCursorLingFerr.onmouseenter = e => {
     cursorLingFerr.style.transition = ""
 }
 
-// conferir se botão esquerdo está sendo pressionado
+// avaliar se isso melhora ou piora
+
+// boxCursorLingFerr.ontouchmove = e => {
+//     cursorLingFerr.style.transition = ""
+// }
+
+//           conferir se botão esquerdo está sendo pressionado          //
 // crédito: https://stackoverflow.com/questions/4065992/jquery-detecting-pressed-mouse-button-during-mousemove-event
 
 let isLeftMouseButtonPressed = false;
