@@ -14,6 +14,17 @@
     z-index: 0;
 }
 
+/* Estilos para dispositivos com toque "grosso" (ex: dedos) */
+@media (pointer: coarse) {
+    #boxCursorLingFerr{
+        height: 48px;
+    }
+
+    #cursorLingFerr{
+        --altura: 75px !important;
+    }
+}
+
 #cursorLingFerr{
     --altura: 40px;
     /* --altura: 200%; */
@@ -60,4 +71,33 @@
 
     -webkit-user-drag: none;
     user-select: none;
+}
+
+@media screen and (max-width: 700px) {
+    #boxCursorLingFerr{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #boxCursorLingFerr{
+        width: 55vw;
+    }
+    #cursorLingFerr{
+        --altura: 60px !important;
+    }
+}
+
+@media screen and (max-width: 190px) {
+    #boxCursorLingFerr{
+        width: 80vw;
+    }
+}
+
+/* o q fazer nesse ponto? */
+@media screen and (max-width: 100px) {
+    #boxCursorLingFerr{
+        width: 80vw;
+    }
+    /* mudar tamanho do curor */
 }
