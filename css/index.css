@@ -1300,7 +1300,9 @@ ver até qual largura de tela o texto estará vis */
     flex-direction: column;
     align-items: center;
 
-    height: 70vh;
+    /* height: 70vh; */
+    height: auto;
+    padding-bottom: 27vh;
 }
 
 
@@ -1316,7 +1318,7 @@ ver até qual largura de tela o texto estará vis */
     margin-top: 5vh;
 
     display: flex;
-    gap: 9% 2%;
+    gap: 1vh 2%;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -1334,8 +1336,8 @@ ver até qual largura de tela o texto estará vis */
 
     align-items: center;
 
-    padding-left: 2.5%;
-    padding-right: 2.5% ;
+    /* padding-left: 2.5%;
+    padding-right: 2.5% ; */
 }
 
 .contatoCard:hover{
@@ -1344,6 +1346,7 @@ ver até qual largura de tela o texto estará vis */
 
 .iconeContato{
     height: 75%;
+    padding-left: 2vw;
     /* margin-left: 10%;
     margin-right: 5%; */
 }
@@ -1353,9 +1356,25 @@ ver até qual largura de tela o texto estará vis */
     /* width: 9vw; */
 
     font-size: clamp(9px, 1.6vw, 2000px);
+
+    padding-left: 0.5vw;
+    padding-right: 2vw;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 315px) {
+    .nomeContato{
+        display: none;
+    }
+
+    .contatoCard{
+        aspect-ratio: 1/1;
+        justify-content: center;
+    }
+
+    .iconeContato{
+        padding-left: 0vw;
+        height: 70%;
+    }
 }
 
 
@@ -1392,7 +1411,7 @@ footer{
 #ske1{    
     top: -1vh;
     width: 100vw;
-    height: 14vh;
+    height: 100vh;
     transform: skewY(4deg);
     background: #002947;
     transform-origin: top right;
@@ -1400,7 +1419,7 @@ footer{
 
 #ske2{
     width: 100vw;
-    height: 10vh;
+    height: 100vh;
     transform: skewY(357deg);
     background: #001627;
     transform-origin: top left;
@@ -1409,7 +1428,7 @@ footer{
 #ske3{
     top: -7vh;
     width: 100vw;
-    height: 10vh;
+    height: 100vh;
     transform: skewY(357deg);
     background: #000f1a;
     transform-origin: top left;
