@@ -1,4 +1,5 @@
 /* header logo movível e cores dos projetos estão deixando o site cortado */
+/* custom shape divider class */
 /* resolução provisória: */
 html{
     overflow-x: hidden;
@@ -1392,48 +1393,94 @@ footer{
     position: relative;
 }
 
-#separadorFooter{
+/* #separadorFooter{
     height: 0;
     width: 0;
-    position: relative;
+    position: relative; */
 /* 
     overflow: hidden; */
-}
+/* } */
 
-.skewed {
+.custom-shape-divider-bottom-1 {
     position: absolute;
-    top: 0;
     bottom: 0;
-    right: 0;
     left: 0;
-    z-index: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+    z-index: 3;
 }
 
-#ske1{    
-    top: -1vh;
-    width: 100vw;
-    height: 100vh;
-    transform: skewY(4deg);
-    background: #002947;
-    transform-origin: top right;
+.custom-shape-divider-bottom-1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 73px;
+    transform: rotateY(180deg);
 }
 
-#ske2{
-    width: 100vw;
-    height: 100vh;
-    transform: skewY(357deg);
-    background: #001627;
-    transform-origin: top left;
+.custom-shape-divider-bottom-1 .shape-fill {
+    fill: #001627;
 }
 
-#ske3{
-    top: -7vh;
-    width: 100vw;
-    height: 100vh;
-    transform: skewY(357deg);
-    background: #000f1a;
-    transform-origin: top left;
+/*  */
+
+.custom-shape-divider-bottom-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+    z-index: 2;
 }
+
+.custom-shape-divider-bottom-2 svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 140px;
+}
+
+.custom-shape-divider-bottom-2 .shape-fill {
+    fill: #002947;
+}
+
+/*  */
+
+.custom-shape-divider-bottom-3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+    z-index: 1;
+    top: 10%;
+}
+
+.custom-shape-divider-bottom-3 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 73px;
+    transform: rotateY(180deg);
+    top: 10%;
+}
+
+.custom-shape-divider-bottom-3 .shape-fill {
+    fill: #000f1a;
+}
+
+
+
+
 
 #contentFooter{
     /* height: 20vh; */
