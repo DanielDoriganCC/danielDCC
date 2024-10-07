@@ -3,6 +3,7 @@
 
 html{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 #content{
@@ -1003,11 +1004,11 @@ html{
     height: 220vh; */
 
     height: auto;
-    padding-bottom: 12vh;
+    padding-bottom: 4vh;
 }
 
 #formacaoAcademica h1{
-    margin-top: 14vh;
+    margin-top: 10vh;
     font-size: 8vmin;
 
     color: #ffffff;
