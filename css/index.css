@@ -1,6 +1,6 @@
 /* header logo movível e cores dos projetos estão deixando o site cortado */
 /* custom shape divider class */
-/* resolução provisória: */
+
 html{
     overflow-x: hidden;
 }
@@ -1334,12 +1334,14 @@ ver até qual largura de tela o texto estará vis */
 
     align-items: center;
 
+    transition: 0.25s;
     /* padding-left: 2.5%;
     padding-right: 2.5% ; */
 }
 
 .contatoCard:hover{
-    border: #002947 1px solid;
+    border: #0e88eb 1px solid;
+    box-shadow: #0e88eb 1px 1px 12px 0px;
 }
 
 .iconeContato{
@@ -1482,7 +1484,7 @@ footer{
 
 #contentFooter{
     padding-bottom: 1%;
-    
+
     width: 100vw;
     background-color: #001627;
 
@@ -1508,7 +1510,7 @@ footer{
     color: white;
     font-size: 1.9vmin;
 } #informativoFooter a{
-    color: white;
+    color: #c8ebff;
 }
 
 #conclusao{
