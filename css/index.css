@@ -5,10 +5,6 @@ html{
     overflow-x: hidden;
 }
 
-body{
-    overflow-x: hidden;
-}
-
 #content{
     display: flex;
     flex-direction: column;
@@ -1389,7 +1385,6 @@ ver até qual largura de tela o texto estará vis */
 /* footer */
 
 footer{
-    height: 20vh;
     position: relative;
 }
 
@@ -1402,6 +1397,7 @@ footer{
 /* } */
 
 .custom-shape-divider-bottom-1 {
+    pointer-events: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1428,6 +1424,7 @@ footer{
 /*  */
 
 .custom-shape-divider-bottom-2 {
+    pointer-events: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1453,6 +1450,7 @@ footer{
 /*  */
 
 .custom-shape-divider-bottom-3 {
+    pointer-events: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1483,7 +1481,8 @@ footer{
 
 
 #contentFooter{
-    /* height: 20vh; */
+    padding-bottom: 1%;
+    
     width: 100vw;
     background-color: #001627;
 
