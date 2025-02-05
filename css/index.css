@@ -1000,11 +1000,9 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-/* 
-    height: 220vh; */
 
     height: auto;
-    padding-bottom: 4vh;
+    padding-bottom: 12vh;
 }
 
 #formacaoAcademica h1{
@@ -1014,7 +1012,7 @@ html{
     color: #ffffff;
 }
 
-#colegiosBox{
+#colegiosBox, #boxCursos{
     gap: 20px;
     display: flex;
     margin-top: 7vh;
@@ -1058,6 +1056,18 @@ html{
 #imgPIC{
     background-image: url(../src/CicloBasico2.jpg);
     background-position-y: 66%;
+}
+
+#imgPIBIC{
+    background-image: url(../src/PIBIC-EM.jpg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+}
+
+#imgMONITORIA{
+    background-image: url(../src/cotuca.jpg);
 }
 
 .nomeColegio{
